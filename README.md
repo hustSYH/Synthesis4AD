@@ -7,7 +7,7 @@
 ## 📑 Quick Navigation
 **📖 Discover Synthesis4AD**
 * [📊 Introduction](#introduction) 
-* [🔍 System Overview](#overview-of-synthesis4ad) 
+* [🔍 Overview](#overview-of-synthesis4ad) 
 * [🌟 High-Fidelity Synthesis](#high-fidelity-anomaly-synthesis) 
 
 **🚀 Quick Start & Usage**
@@ -21,11 +21,19 @@
 **📌 Resources**
 * [🙏 Acknowledgements](#acknowledgements) | [📖 Citation](#citation) | [📄 License](#license) | [📧 Contact](#contact)
 
+---
+
+<a name="introduction" id="introduction"></a>
+
 ## 📊 Introduction
+
+
 Industrial 3D anomaly detection is fundamentally constrained by the scarcity and long-tailed distribution of abnormal samples. To address this challenge, we propose **Synthesis4AD**, an end-to-end paradigm that leverages large-scale, high-fidelity synthetic anomalies to learn more discriminative representations.
 
 Built upon the controllable Multi-dimensional Primitive-Guided Anomaly Synthesis (**MPAS**) engine, **Synthesis4AD** interactively injects geometrically realistic defects guided by higher-dimensional primitives and simultaneously generates accurate point-wise anomaly masks. To facilitate a complete end-to-end workflow, this repository also integrates a 3D anomaly detection module, allowing users to easily train and evaluate models using the synthesized data.
 
+
+<a name="overview-of-synthesis4ad" id="overview-of-synthesis4ad"></a>
 
 ## 🔍 Overview of Synthesis4AD
 
@@ -51,6 +59,8 @@ To move from an algorithmic design to a practically deployable industrial workfl
 
 
 
+
+<a name="getting-started" id="getting-started"></a>
 
 ## 🛠️ Getting Started
 
@@ -113,6 +123,9 @@ pip install -e .
 
 ---
 
+
+<a name="run" id="run"></a>
+
 ## 🚀 Run
 Start the **3D-DefectStudio** interface to interactively load normal point clouds, generate anomalous samples, and evaluate:
 
@@ -153,6 +166,8 @@ Switch to the **Anomaly Det** tab to configure the Simple3D backend. Specify you
 
 For developers and researchers looking to integrate anomaly generation into existing machine learning pipelines or automate large-scale dataset synthesis, the MPAS Core Library can be installed as a standalone Python package. This allows you to bypass the GUI and programmatically access all core generation engines with fine-grained parameter control.
 
+<a name="installation" id="installation"></a>
+
 ### Installation
 
 Navigate to the directory containing `pyproject.toml` and install in editable mode:
@@ -161,6 +176,8 @@ Navigate to the directory containing `pyproject.toml` and install in editable mo
 cd path/to/MPAS
 pip install -e .
 ```
+
+<a name="quick-start" id="quick-start"></a>
 
 ### Quick Start
 
@@ -192,6 +209,8 @@ mpas.save_gt(gt, "output_gt.txt")
 mpas.save_mask(mask_points, "output_mask.txt")
 ```
 
+<a name="function-reference" id="function-reference"></a>
+
 ### Function Reference
 
 * **`mpas.sphere`**: Generates spherical point-like anomalies.
@@ -215,6 +234,7 @@ mpas.save_mask(mask_points, "output_mask.txt")
     * `surface_scale`: Surface deformation scale 
 
 
+<a name="return-values" id="return-values"></a>
 
 ### Return Values
 
@@ -223,6 +243,8 @@ All functions return a dictionary with:
 - `mask_points`: Anomaly region points (M, 3)
 - `gt`: GT labels (N, 1), 1=anomaly
 
+
+<a name="high-fidelity-anomaly-synthesis" id="high-fidelity-anomaly-synthesis"></a>
 
 ## 🌟 High-Fidelity Anomaly Synthesis
 
@@ -236,12 +258,16 @@ Visualization of anomalies. From top to bottom: real anomalies, synthesized anom
 
 ---
 
+<a name="acknowledgements" id="acknowledgements"></a>
+
 ## 🙏 Acknowledgements
 Thanks to related 3D anomaly detection and point cloud processing projects for inspiration, including:
 * 🌟 **GLFM**
 * 🚀 **Simple3D** 
 
 ---
+
+<a name="citation" id="citation"></a>
 
 ## 📖 Citation
 If you find our data or code helpful for your research, please consider citing our paper:
@@ -277,6 +303,8 @@ If you find our data or code helpful for your research, please consider citing o
 }
 ```
 
+<a name="license" id="license"></a>
+
 ## 📄 License
 
 This project is released under the [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/). 
@@ -284,6 +312,8 @@ This project is released under the [CC BY-NC 4.0 License](https://creativecommon
 You are free to share and adapt the software and MPAS for **non-commercial purposes**, provided you give appropriate **attribution** (see [Citation](#-citation)). 
 
 **Commercial Use:** Any commercial application of this project or its derived works is strictly prohibited without prior written permission. For commercial inquiries, please contact [yihansun@hust.edu.cn](mailto:yihansun@hust.edu.cn) or [yuqicheng@hust.edu.cn](mailto:yuqicheng@hust.edu.cn).
+
+<a name="contact" id="contact"></a>
 
 ## 📧 Contact
 If you have any questions about our work, please do not hesitate to contact:
