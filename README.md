@@ -6,20 +6,20 @@
 
 ## 📑 Quick Navigation
 **📖 Discover Synthesis4AD**
-* [📊 Introduction](#introduction) 
-* [🔍 Overview](#overview-of-synthesis4ad) 
-* [🌟 High-Fidelity Synthesis](#high-fidelity-anomaly-synthesis) 
+* [Introduction](#introduction) 
+* [Overview](#overview-of-synthesis4ad) 
+* [High-Fidelity Synthesis](#high-fidelity-anomaly-synthesis) 
 
 **🚀 Quick Start & Usage**
-* [🛠️ Environment Setup](#getting-started) 
-* [▶️ Run the Studio](#run) 
+* [Environment Setup](#getting-started) 
+* [Run the Studio](#run) 
 
 **💻 Developer API (MPAS)**
-* [📦 Installation](#installation) & [⚡ Quick Start](#quick-start)
-* [🛠️ Function Reference](#function-reference) & [↪️ Return Values](#return-values) 
+* [Installation](#installation) & [Quick Start](#quick-start)
+* [Function Reference](#function-reference) & [Return Values](#return-values) 
 
 **📌 Resources**
-* [🙏 Acknowledgements](#acknowledgements) | [📖 Citation](#citation) | [📄 License](#license) | [📧 Contact](#contact)
+* [Acknowledgements](#acknowledgements) | [Citation](#citation) | [License](#license) | [Contact](#contact)
 
 ---
 
