@@ -4,10 +4,28 @@
 > 📚 [**Paper**]() • 🏠 [**Project Homepage**]()  
 > by [Yihan Sun*](https://hustsyh.github.io/), [Yuqi Cheng*](https://hustcyq.github.io/), Junjie Zu, Yuxiang Tan, Guoyang Xie, Yucheng Wang, [Yunkang Cao](https://caoyunkang.github.io/), [Weiming Shen](https://scholar.google.com/citations?user=FuSHsx4AAAAJ&hl=en).
 
+## 📑 Quick Navigation
+**📖 Discover Synthesis4AD**
+* [📊 Introduction](#introduction) 
+* [🔍 System Overview](#overview-of-synthesis4ad) 
+* [🌟 High-Fidelity Synthesis](#high-fidelity-anomaly-synthesis) 
+
+**🚀 Quick Start & Usage**
+* [🛠️ Environment Setup](#getting-started) 
+* [▶️ Run the Studio](#run) 
+
+**💻 Developer API (MPAS)**
+* [📦 Installation](#installation) & [⚡ Quick Start](#quick-start)
+* [🛠️ Function Reference](#function-reference) & [↪️ Return Values](#return-values) 
+
+**📌 Resources**
+* [🙏 Acknowledgements](#acknowledgements) | [📖 Citation](#citation) | [📄 License](#license) | [📧 Contact](#contact)
+
 ## 📊 Introduction
 Industrial 3D anomaly detection is fundamentally constrained by the scarcity and long-tailed distribution of abnormal samples. To address this challenge, we propose **Synthesis4AD**, an end-to-end paradigm that leverages large-scale, high-fidelity synthetic anomalies to learn more discriminative representations.
 
 Built upon the controllable Multi-dimensional Primitive-Guided Anomaly Synthesis (**MPAS**) engine, **Synthesis4AD** interactively injects geometrically realistic defects guided by higher-dimensional primitives and simultaneously generates accurate point-wise anomaly masks. To facilitate a complete end-to-end workflow, this repository also integrates a 3D anomaly detection module, allowing users to easily train and evaluate models using the synthesized data.
+
 
 ## 🔍 Overview of Synthesis4AD
 
@@ -17,7 +35,7 @@ MPAS generates geometrically realistic defects guided by higher-dimensional supp
 * **2D Primitives:** Guides deformation along planar patches (e.g., Bent, Crack).
 * **3D Primitives:** Utilizes the object convex hull for complex Freeform Defects.
 
-<img src="./static/images/MPAS.png" width="800px" alt="MPAS Framework Visualization">
+<img src="./Static/images/MPAS.png" width="800px" alt="MPAS Framework Visualization">
 
 ### 2. Synthesis4AD System
 To move from an algorithmic design to a practically deployable industrial workflow, we introduce **Synthesis4AD**, a tightly coupled three-stage end-to-end system that unifies anomaly synthesis, detector training, and online inference:
@@ -27,7 +45,7 @@ To move from an algorithmic design to a practically deployable industrial workfl
 * **Stage III: Online Inference.** During deployment, the trained model evaluates newly scanned 3D data, outputting precise point-wise anomaly localization maps and overall object-level anomaly scores.
 
 
-<img src="./static/images/SYSTEM.png" width="800px" alt="Synthesis4AD System Pipeline">
+<img src="./Static/images/SYSTEM.png" width="800px" alt="Synthesis4AD System Pipeline">
 
 
 
@@ -105,7 +123,7 @@ python main.py
 ### 1.Interactive Anomaly Generation
 Navigate to the **Anomaly Gen** tab to load your point cloud and apply multi-dimensional primitives (e.g., Sphere, Scratch, Bend, Crack). You can interactively adjust parameters like strength and width to synthesize high-fidelity defects in real-time.
 
-<img src="./static/images/GUI.png" width="800px" alt="Anomaly Generation GUI">
+<img src="./Static/images/GUI.png" width="800px" alt="Anomaly Generation GUI">
 
 
 ### 2.Anomaly Detection
@@ -124,7 +142,7 @@ Switch to the **Anomaly Det** tab to configure the Simple3D backend. Specify you
 * **Exp (Output):** Enter an experiment name (e.g., `my_exp`).
 * **Algorithm Settings:** Adjust optional Simple3D parameters below (such as `num_grp`, `grp_sz`, `MSND`, `LFSA`) based on your specific task needs.
 
-<img src="./static/images/CONFIG.png" width="800px" alt="Anomaly Detection GUI">
+<img src="./Static/images/CONFIG.png" width="800px" alt="Anomaly Detection GUI">
 
 
 
@@ -211,7 +229,7 @@ All functions return a dictionary with:
 Rather than just applying simple noise or regularized heuristic perturbations, **MPAS** can faithfully reproduce realistic defect morphologies at the geometric level. Furthermore, by enabling compositional synthesis, it produces complex and heterogeneous compound anomalies that combine multiple deformation modes, substantially enriching the anomaly space.
 
 
-<img src="./static/images/VIS.png" width="800px" alt="Visualization of anomalies">
+<img src="./Static/images/VIS.png" width="800px" alt="Visualization of anomalies">
 
 Visualization of anomalies. From top to bottom: real anomalies, synthesized anomalies by MPAS with the same types, and two rows of more diverse compound anomalies synthesized by MPAS. Red insets highlight defect regions for detailed comparison.</em></p>
 
@@ -267,7 +285,7 @@ You are free to share and adapt the software and MPAS for **non-commercial purpo
 
 **Commercial Use:** Any commercial application of this project or its derived works is strictly prohibited without prior written permission. For commercial inquiries, please contact [yihansun@hust.edu.cn](mailto:yihansun@hust.edu.cn) or [yuqicheng@hust.edu.cn](mailto:yuqicheng@hust.edu.cn).
 
-## Contact
+## 📧 Contact
 If you have any questions about our work, please do not hesitate to contact:
 * [yihansun@hust.edu.cn](mailto:yihansun@hust.edu.cn)
 * [yuqicheng@hust.edu.cn](mailto:yuqicheng@hust.edu.cn)
